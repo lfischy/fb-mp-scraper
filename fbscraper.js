@@ -1,12 +1,19 @@
 //Things to do, in no particular order:
-//TODO: return results to discord webhook
-//TODO: return how long ago item was listed
+
+
 
 //TODO: ban protection, refresh marketplace random number of times - switch between refreshing page and navigating to new page. Throw in random searches w/ diff filters etc - (dont return random search results)
-//TODO: add in 'fyp' flow, pulls results from facebook todays picks - after searching for one item, page will be tailored - potentially more valuable than refreshing most recent listing - plus may prevent bans or rate limiting
 //TODO: return "listed x num of hrs ago"
-//TODO: dynamically return amount of new listing since last refreshed
+
 //TODO: change location and range based on input
+
+
+//TODO: break code down into functions
+//TODO: dynamically return amount of new listing since last refreshed - loop thru and compare .textContent of listings in array, only return the ones that are new since last refresh
+//TODO: implement proxy usage
+//FIXME: fix "requesting mainframe too early" when using stealth/headless - works fine in head mode
+//TODO: add feature to take unlimited amount of search terms + price limits, searching a diff term + price each interval
+
 
 const puppeteer = require("puppeteer-extra");
 const readline = require('readline-sync'); 
@@ -14,7 +21,7 @@ const hookcord = require('hookcord');
 const stealth = require("puppeteer-extra-plugin-stealth");
 
 puppeteer.use(stealth());
-
+ 
 // init hookcord to send to webhook
 const Hook = new hookcord.Hook()
 Hook.login('1208975570180902932', 'QrmCiRrtQUHpz06NXNpNZ8B86clgWhWhUAp0EcRB8mXoJJewUFKyGNSWs984x5ohboj1')
@@ -41,6 +48,7 @@ browser = puppeteer
       height: 800,
       isMobile: false,
     });
+    
     page.goto("https://www.facebook.com/", {
     });
 
