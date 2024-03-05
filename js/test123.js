@@ -82,10 +82,11 @@ browser = puppeteer
         return page.$$eval(imgLocation, images => images.map(image => image.src) );
     }
     
+    
     await search();
     
     
-    
+
     //seperates each words and stores them in seperatedTerms - returns seperated terms
     
     function seperateTerms(search) {
