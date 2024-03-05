@@ -85,6 +85,7 @@ browser = puppeteer
     await search();
     
     
+    
     //seperates each words and stores them in seperatedTerms - returns seperated terms
     
     function seperateTerms(search) {
