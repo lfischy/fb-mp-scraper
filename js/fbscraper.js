@@ -7,7 +7,6 @@
 
 //TODO: change location and range based on input
 
-
 //TODO: break code down into functions
 //TODO: implement proxy usage
 //FIXME: fix "requesting mainframe too early" when using stealth/headless - works fine in head mode
