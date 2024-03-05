@@ -82,8 +82,6 @@ browser = puppeteer
         return page.$$eval(imgLocation, images => images.map(image => image.src) );
     }
     
-
-    
     await search();
     
     
