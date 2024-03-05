@@ -71,7 +71,7 @@ browser = puppeteer
         delay: 5,
     });
 
-    await page.click('button[name="login"]')
+    await page.click('button[name="login"]') 
     await page.waitForNavigation({waitUntil: 'networkidle0'});
 }
  
