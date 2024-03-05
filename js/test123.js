@@ -89,7 +89,7 @@ browser = puppeteer
     
     function seperateTerms(search) {
     
-    search = search.split(" ") 
+    search = search.split(" ")
     let seperatedTerms = " ";
     for (i = 0; i < search.length; i++) {
         seperatedTerms += search[i] + "%20";
