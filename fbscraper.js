@@ -130,6 +130,7 @@ browser = puppeteer
 
     }
     
+    
     let oldListings = {
         titles: [],
         prices: [],
