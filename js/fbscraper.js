@@ -11,6 +11,8 @@
 //dont spit back all listings to user on first refresh call - use count variable w/in refresh
 // look into diff results, acct vs no acct
 
+//NO ACCOUNT returns different results - look into graphql requests.
+
 const puppeteer = require("puppeteer-extra");
 const readline = require('readline-sync'); 
 const hookcord = require('hookcord');
